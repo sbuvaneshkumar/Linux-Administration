@@ -1,0 +1,14 @@
+Used to synchronize files in server
+
+1. Send a file from server to client
+
+#rsync -v -e ssh /root/file remote@192.168.56.1:~/destination
+
+2. Copy only new files and don't copy existing files:-
+
+#rsync -u -v -e ssh /root/* remote@192.168.56.1:~/destination
+
+3. Copy files from client to server
+
+#rsync -u -v -e ssh server@192.168.56.1:~/source /home/remote/
+

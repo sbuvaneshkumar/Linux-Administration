@@ -1,0 +1,23 @@
+1. Temporary setup
+
+#alias var=command   
+
+example:-
+
+#alias hello="init 6"
+
+2. To remove:-
+
+#unalias
+
+3. To permanently setup:-
+
+3.1 User level:-
+
+#vim .bashrc
+alias hello="init 6"
+
+3.2 Global level:-
+
+#vim /etc/bashrc
+alias hello="init 6"

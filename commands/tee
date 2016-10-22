@@ -1,0 +1,15 @@
+****Tee command****
+
+To write to standard output and a file use tee after a pipe and specify the file or files to write to.
+
+echo 'foo' | tee foo.txt
+
+to append pass -a option to too command
+
+echo 'bar' | tee -a foo.txt
+
+****Watch log files and write in to a file****
+
+In this example there is a requirement to analyse the HTTP2 traffic going through an nginx server. Using tee the live logs can be streamed to standard output and also write to a file for further analysis later.
+
+tail -f /var/log/nginx/access.log | grep --line-buffered "HTTP/2.0" | tee -a http2.log

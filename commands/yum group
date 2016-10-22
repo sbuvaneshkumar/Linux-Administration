@@ -1,0 +1,12 @@
+1. List available groups
+
+#yum grouplist
+
+2. Install group packages
+
+#yum groupinstall "Web Server" 
+
+3. Remove group packages
+
+#yum groupremove "Web Server"
+
